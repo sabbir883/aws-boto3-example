@@ -15,7 +15,7 @@ instance = ec2.create_instances(
     MaxCount=1,
     KeyName='test_key_pair', # Use your configured_key_pair
     SecurityGroupIds=[ 'sg-7fbf7e04'], # use your configured security group's Id. 
-    UserData='yum install httpd; chkconfig httpd on;/etc/init.d/httpd start',  # This will installed httpd and start the httpd process
+    UserData='yum install httpd; chkconfig httpd on;/etc/init.d/httpd start',  # This will install httpd and start the httpd process
     InstanceType='t2.micro',
     BlockDeviceMappings=[
         {
